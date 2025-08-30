@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAIROS TOPUP - Premium Gaming Top-Up Service</title>
+    <meta name="description" content="KAIROS TOPUP - Layanan top-up game premium dengan harga terbaik, proses cepat, dan terpercaya. Melayani semua game populer dengan sistem pembayaran mudah.">
+    <meta name="keywords" content="topup game, mobile legends, free fire, pubg mobile, valorant, genshin impact, top up murah">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="kairos-body min-h-screen">
+    <!-- Header -->
+    <header class="kairos-header sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="kairos-logo-container">
+                        <i class="fas fa-crown text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="kairos-brand-name">KAIROS TOPUP</h1>
+                        <p class="kairos-tagline">Premium Gaming Experience</p>
+                    </div>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-md mx-4">
+                    <div class="relative">
+                        <input type="text" id="searchInput" placeholder="Cari game favorit..." 
+                               class="kairos-search-input">
+                        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gold-400"></i>
+                    </div>
+                </div>
+                
+                <!-- User Menu -->
+                <div class="flex items-center space-x-3">
+                    <button class="kairos-user-btn">
+                        <i class="fas fa-user-circle text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="kairos-hero">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="kairos-hero-title">Elevate Your Gaming Experience</h2>
+            <p class="kairos-hero-subtitle">Premium top-up service dengan kualitas terbaik dan harga kompetitif</p>
+            <div class="kairos-hero-features">
+                <div class="kairos-feature-item">
+                    <i class="fas fa-bolt"></i>
+                    <span>Proses Instan</span>
+                </div>
+                <div class="kairos-feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% Aman</span>
+                </div>
+                <div class="kairos-feature-item">
+                    <i class="fas fa-headset"></i>
+                    <span>Support 24/7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6">
+        <!-- Categories -->
+        <div class="mb-6">
+            <div class="flex flex-wrap gap-2">
+                <button class="category-btn active" data-category="all">Semua Game</button>
+                <button class="category-btn" data-category="moba">MOBA</button>
+                <button class="category-btn" data-category="battle-royale">Battle Royale</button>
+                <button class="category-btn" data-category="fps">FPS</button>
+                <button class="category-btn" data-category="rpg">RPG</button>
+                <button class="category-btn" data-category="simulation">Simulasi</button>
+                <button class="category-btn" data-category="other">Lainnya</button>
+            </div>
+        </div>
+
+        <!-- Popular Games Section -->
+        <section class="mb-8">
+            <h3 class="kairos-section-title">
+                <i class="fas fa-fire kairos-fire-icon mr-3"></i>
+                Game Populer
+            </h3>
+            <div id="popularGamesGrid" class="kairos-games-grid">
+                <!-- Popular games will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- All Games Section -->
+        <section>
+            <h3 class="kairos-section-title">Semua Game</h3>
+            <div id="allGamesGrid" class="kairos-games-grid kairos-all-games">
+                <!-- All games will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Game Selection Modal -->
+    <div id="gameModal" class="kairos-modal-overlay z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="kairos-modal">
+                <div class="p-8">
+                    <!-- Game Header -->
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="flex items-center space-x-4">
+                            <div id="modalGameIcon" class="kairos-modal-game-icon">
+                                <!-- Game icon will be populated -->
+                            </div>
+                            <div>
+                                <h3 id="modalGameName" class="kairos-modal-game-name"></h3>
+                                <p id="modalGameCategory" class="kairos-modal-game-category"></p>
+                            </div>
+                        </div>
+                        <button id="closeModal" class="kairos-close-btn">
+                            <i class="fas fa-times text-2xl"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Player ID Input -->
+                    <div class="mb-6">
+                        <label class="kairos-label">Player ID / User ID</label>
+                        <input type="text" id="playerId" placeholder="Masukkan Player ID..." 
+                               class="kairos-input">
+                        <p class="kairos-input-help">Pastikan Player ID sudah benar untuk menghindari kesalahan</p>
+                    </div>
+                    
+                    <!-- Denominations -->
+                    <div class="mb-6">
+                        <h4 class="kairos-modal-section-title">Pilih Nominal</h4>
+                        <div id="denominationsList" class="kairos-denominations-grid">
+                            <!-- Denominations will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Method -->
+                    <div class="mb-6">
+                        <h4 class="kairos-modal-section-title">Metode Pembayaran</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                            <div class="kairos-payment-method active" data-method="whatsapp">
+                                <i class="fab fa-whatsapp text-2xl mb-2"></i>
+                                <span>WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Summary -->
+                    <div id="orderSummary" class="kairos-order-summary mb-6 hidden">
+                        <h4 class="kairos-summary-title">Ringkasan Pesanan</h4>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span>Game:</span>
+                                <span id="summaryGame" class="kairos-summary-value"></span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Item:</span>
+                                <span id="summaryItem" class="kairos-summary-value"></span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Player ID:</span>
+                                <span id="summaryPlayerId" class="kairos-summary-value"></span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Harga:</span>
+                                <span id="summaryPrice" class="kairos-summary-value"></span>
+                            </div>
+                            <div class="kairos-summary-total">
+                                <span>Total:</span>
+                                <span id="summaryTotal"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Buyer Info -->
+                    <div class="mb-6">
+                        <h4 class="kairos-modal-section-title">Data Pembeli</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="kairos-label">Nama Lengkap</label>
+                                <input type="text" id="buyerName" placeholder="Masukkan nama lengkap..." 
+                                       class="kairos-input">
+                            </div>
+                            <div>
+                                <label class="kairos-label">Nomor WhatsApp</label>
+                                <input type="tel" id="buyerPhone" placeholder="08xxxxxxxxxx" 
+                                       class="kairos-input">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex gap-3">
+                        <button id="buyNowBtn" class="kairos-buy-btn">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed top-4 right-4 z-50 hidden">
+        <div class="kairos-toast">
+            <div class="flex items-center">
+                <i id="toastIcon" class="mr-3 text-xl"></i>
+                <span id="toastMessage"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
