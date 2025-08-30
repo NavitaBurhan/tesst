@@ -512,10 +512,30 @@ function renderDenominations(denominations) {
   });
 }
 
+// Emoji selector berdasarkan nama item
+function getItemEmoji(itemName) {
+  const t = itemName.toLowerCase();
+  if (t.includes('diamond')) return '💎';
+  if (t.includes('genesis') || t.includes('crystal')) return '🔮';
+  if (t.includes('shard')) return '✨';
+  if (t.includes('oneiric')) return '✨';
+  if (t.includes('gem')) return '🔹';
+  if (t.includes('robux')) return '🪙';
+  if (t.includes('minecoin')) return '🪙';
+  if (t.includes('coin')) return '🪙';
+  if (t.includes('cash')) return '💵';
+  if (t.includes('voucher')) return '🎟️';
+  if (t.includes('uc')) return '🪙';
+  if (t.includes('vp')) return '🎯';
+  if (t.includes('cp')) return '🎯';
+  if (t.includes('show-bucks') || t.includes('bucks')) return '🪙';
+  return '🎮';
+}
+
 // Create denomination button
 function createDenominationButton(denomination) {
   const button = document.createElement("div");
-  button.className = "denomination-btn denom-card";
+  button.className = "denomination-btn";
   button.setAttribute("data-amount", denomination.amount);
   button.setAttribute("role", "button");
   button.setAttribute("tabindex", "0");
@@ -524,13 +544,14 @@ function createDenominationButton(denomination) {
     `Pilih ${denomination.item} seharga ${formatCurrency(denomination.amount)}`
   );
 
+  const emoji = getItemEmoji(denomination.item);
+
   button.innerHTML = `
-    ${denomination.popular ? '<div class="denom-badge">BEST</div>' : ''}
-    <div class="denom-content">
-        <div class="denom-item">${denomination.item}</div>
-        <div class="denom-price">${formatCurrency(denomination.amount)}</div>
+    <div class="denom-row">
+      <span class="denom-emoji" aria-hidden="true">${emoji}</span>
+      <span class="item-name">${denomination.item}</span>
     </div>
-    <div class="denom-check" aria-hidden="true"></div>
+    <div class="item-price">${formatCurrency(denomination.amount)}</div>
   `;
 
   button.addEventListener("click", () =>
