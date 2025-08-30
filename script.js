@@ -3,7 +3,7 @@
 
 // Configuration
 const CONFIG = {
-  whatsappNumber: "+6283132422903", // Change this to your WhatsApp number
+  whatsappNumber: "+62895364952866", // Change this to your WhatsApp number
   currency: "IDR",
   brandName: "KAIROS TOPUP",
 };
@@ -24,7 +24,6 @@ const GAMES_DATA = [
       { amount: 6272, item: "19 Diamonds", popular: false },
       { amount: 8571, item: "28 Diamonds", popular: false },
       { amount: 10555, item: "36 Diamonds", popular: true },
-      { amount: 12281, item: "44 Diamonds", popular: false },
       { amount: 15366, item: "56 Diamonds", popular: false },
       { amount: 23273, item: "86 Diamonds", popular: false },
       { amount: 45130, item: "170 Diamonds", popular: true },
@@ -133,12 +132,43 @@ const GAMES_DATA = [
     category: "battle-royale",
     popular: true,
     denominations: [
-      { amount: 5000, item: "60 UC", popular: true },
-      { amount: 12000, item: "150 UC", popular: true },
-      { amount: 25000, item: "300 UC", popular: true },
-      { amount: 50000, item: "600 UC", popular: false },
-      { amount: 100000, item: "1500 UC", popular: false },
-      { amount: 250000, item: "3850 UC", popular: false },
+      { amount: 8300, item: "PUBG Mobile 15 UC", popular: true },
+      { amount: 9100, item: "PUBG Mobile 25 UC", popular: true },
+      { amount: 15200, item: "PUBG Mobile 35 UC", popular: true },
+      { amount: 15200, item: "PUBG Mobile 50 UC", popular: true },
+      { amount: 15200, item: "PUBG Mobile 60 UC", popular: true },
+      { amount: 11700, item: "PUBG Mobile Weekly Deal Pack 1", popular: true },
+      { amount: 24160, item: "PUBG Mobile 70 UC", popular: true },
+      { amount: 28725, item: "PUBG Mobile 100 UC", popular: true },
+      { amount: 43150, item: "PUBG Mobile 125 UC", popular: true },
+      { amount: 43150, item: "PUBG Mobile 150 UC", popular: true },
+      { amount: 55769, item: "PUBG Mobile 200 UC", popular: true },
+      { amount: 58130, item: "PUBG Mobile 210 UC", popular: true },
+      { amount: 70410, item: "PUBG Mobile 250 UC", popular: true },
+      { amount: 72250, item: "PUBG Mobile 300 UC", popular: true },
+      { amount: 84600, item: "PUBG Mobile 350 UC", popular: true },
+      { amount: 87300, item: "PUBG Mobile 375 UC", popular: true },
+      { amount: 111578, item: "PUBG Mobile 500 UC", popular: false },
+      { amount: 125550, item: "PUBG Mobile 525 UC", popular: false },
+      { amount: 155600, item: "PUBG Mobile 700 UC", popular: false },
+      { amount: 167569, item: "PUBG Mobile 750 UC", popular: false },
+      { amount: 227525, item: "PUBG Mobile 1000 UC", popular: false },
+      { amount: 239000, item: "PUBG Mobile 1100 UC", popular: false },
+      { amount: 278010, item: "PUBG Mobile 1250 UC", popular: false },
+      { amount: 321500, item: "PUBG Mobile 1500 UC", popular: false },
+      { amount: 351200, item: "PUBG Mobile 1750 UC", popular: false },
+      { amount: 506800, item: "PUBG Mobile 2500 UC", popular: false },
+      { amount: 37800, item: "PUBG Mobile Weekly Deal Pack 2", popular: true },
+      {
+        amount: 37900,
+        item: "PUBG Mobile Weekly Mythic Emblem Value Pack",
+        popular: true,
+      },
+      {
+        amount: 426700,
+        item: "Elite Pass Plus + Kupon Peti Klasik",
+        popular: false,
+      },
     ],
   },
   {
@@ -148,10 +178,13 @@ const GAMES_DATA = [
     category: "battle-royale",
     popular: true,
     denominations: [
-      { amount: 15000, item: "128 CP", popular: true },
-      { amount: 30000, item: "256 CP", popular: true },
-      { amount: 50000, item: "435 CP", popular: true },
-      { amount: 100000, item: "880 CP", popular: false },
+      { amount: 5995, item: "26 + 5 CP", popular: true },
+      { amount: 10445, item: "53 + 9 CP", popular: true },
+      { amount: 20199, item: "106 + 21 CP", popular: true },
+      { amount: 45235, item: "264 + 53 CP", popular: true },
+      { amount: 94199, item: "528 + 106 CP", popular: true },
+      { amount: 178350, item: "1056 + 317 CP", popular: false },
+      { amount: 211750, item: "1584 + 475 CP", popular: false },
     ],
   },
   {
@@ -175,11 +208,16 @@ const GAMES_DATA = [
     category: "fps",
     popular: true,
     denominations: [
-      { amount: 15000, item: "1000 VP", popular: true },
-      { amount: 30000, item: "2050 VP", popular: true },
-      { amount: 50000, item: "3500 VP", popular: true },
-      { amount: 75000, item: "5350 VP", popular: false },
-      { amount: 100000, item: "7200 VP", popular: false },
+      { amount: 41875, item: "300 Valorant Points", popular: true },
+      { amount: 46370, item: "420 Valorant Points", popular: true },
+      { amount: 74700, item: "625 Valorant Points", popular: true },
+      { amount: 74050, item: "700 Valorant Points", popular: true },
+      { amount: 125850, item: "1125 Valorant Points", popular: false },
+      { amount: 137575, item: "1375 Valorant Points", popular: false },
+      { amount: 143610, item: "1650 Valorant Points", popular: false },
+      { amount: 172113, item: "1950 Valorant Points", popular: false },
+      { amount: 227651, item: "2400 Valorant Points", popular: false },
+      { amount: 272921, item: "2850 Valorant Points", popular: false },
     ],
   },
   {
@@ -288,15 +326,15 @@ const GAMES_DATA = [
 
   // Other Games
   {
-    id: "among-us",
-    name: "Among Us",
+    id: "super-sus",
+    name: "Super Sus",
     icon: "https://www.tokogame.com/_next/image?url=https%3A%2F%2Fstatic.tokogame.com%2Fproducts%2Fsupersus-promo.jpg&w=256&q=75",
     category: "other",
-    popular: false,
+    popular: true,
     denominations: [
-      { amount: 15000, item: "Starter Pack", popular: true },
-      { amount: 25000, item: "Cosmicube Bundle", popular: true },
-      { amount: 50000, item: "Premium Bundle", popular: false },
+      { amount: 15425, item: "100 GOLDSTAR", popular: true },
+      { amount: 39175, item: "310 GOLDSTAR", popular: true },
+      { amount: 67675, item: "520 GOLDSTAR", popular: false }
     ],
   },
   {
@@ -345,9 +383,20 @@ const GAMES_DATA = [
     category: "other",
     popular: false,
     denominations: [
-      { amount: 10000, item: "300 Gems", popular: true },
-      { amount: 25000, item: "800 Gems", popular: true },
-      { amount: 50000, item: "1700 Gems", popular: false },
+      { amount: 14600, item: "Stumble Guys 250 Gems", popular: true },
+      { amount: 36200, item: "Stumble Guys 800 Gems", popular: true },
+      { amount: 42900, item: "Stumble Guys 120 Tokens", popular: true },
+      { amount: 349100, item: "Stumble Guys 1.300 Tokens", popular: false },
+      {
+        amount: 62350,
+        item: "Stumble Guys 1.600 Gems dan 75 Tokens",
+        popular: true,
+      },
+      {
+        amount: 139475,
+        item: "Stumble Guys 5.000 Gems dan 275 Tokens",
+        popular: false,
+      },
     ],
   },
   {
@@ -362,6 +411,233 @@ const GAMES_DATA = [
       { amount: 50000, item: "4000 Show-Bucks", popular: false },
     ],
   },
+  /* === Added Popular New Games === */
+  {
+    id: "honor-of-kings",
+    name: "Honor of Kings",
+    icon: "https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?w=178&h=178&fit=crop&crop=center",
+    category: "moba",
+    popular: true,
+    denominations: [
+      { amount: 2550, item: "8 Tokens", popular: true },
+      { amount: 3750, item: "16 + 1 Tokens", popular: true },
+      { amount: 5100, item: "23 Tokens", popular: true },
+      { amount: 16498, item: "80 + 8 Tokens", popular: true },
+      { amount: 41900, item: "240 + 17 Tokens", popular: true },
+      { amount: 71100, item: "400 + 32 Tokens", popular: true },
+      { amount: 98850, item: "560 + 45 Tokens", popular: true },
+      { amount: 140135, item: "800 + 95 Tokens", popular: true },
+      { amount: 215523, item: "1200 + 153 Tokens", popular: false },
+      { amount: 433300, item: "2400 + 324 Tokens", popular: false },
+      { amount: 14650, item: "Weekly Card", popular: true },
+      { amount: 41950, item: "Weekly Card Plus", popular: true },
+    ],
+  },
+  {
+    id: "wild-rift",
+    name: "League of Legends: Wild Rift",
+    icon: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=178&h=178&fit=crop&crop=center",
+    category: "moba",
+    popular: true,
+    denominations: [
+      { amount: 10000, item: "125 Wild Cores", popular: true },
+      { amount: 25000, item: "300 Wild Cores", popular: true },
+      { amount: 50000, item: "625 Wild Cores", popular: true },
+      { amount: 100000, item: "1375 Wild Cores", popular: false },
+      { amount: 250000, item: "3500 Wild Cores", popular: false },
+    ],
+  },
+  {
+    id: "efootball-2024",
+    name: "eFootball 2024",
+    icon: "https://images.unsplash.com/photo-1603791452906-bb9f4d0a3b1a?w=178&h=178&fit=crop&crop=center",
+    category: "sports",
+    popular: true,
+    denominations: [
+      { amount: 12000, item: "100 Coins", popular: true },
+      { amount: 25000, item: "230 Coins", popular: true },
+      { amount: 50000, item: "475 Coins", popular: true },
+      { amount: 100000, item: "1000 Coins", popular: false },
+      { amount: 250000, item: "2550 Coins", popular: false },
+    ],
+  },
+  {
+    id: "fortnite",
+    name: "Fortnite",
+    icon: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=178&h=178&fit=crop&crop=center",
+    category: "battle-royale",
+    popular: true,
+    denominations: [
+      { amount: 12000, item: "1000 V-Bucks", popular: true },
+      { amount: 30000, item: "2800 V-Bucks", popular: true },
+      { amount: 50000, item: "5000 V-Bucks", popular: true },
+      { amount: 100000, item: "13500 V-Bucks", popular: false },
+    ],
+  },
+  {
+    id: "warzone-mobile",
+    name: "Warzone Mobile",
+    icon: "https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?w=178&h=178&fit=crop&crop=center",
+    category: "fps",
+    popular: true,
+    denominations: [
+      { amount: 15000, item: "80 COD Points", popular: true },
+      { amount: 30000, item: "160 COD Points", popular: true },
+      { amount: 50000, item: "420 COD Points", popular: true },
+      { amount: 100000, item: "1100 COD Points", popular: false },
+    ],
+  },
+  {
+    id: "ragnarok-origin",
+    name: "Ragnarok Origin",
+    icon: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=178&h=178&fit=crop&crop=center",
+    category: "rpg",
+    popular: false,
+    denominations: [
+      { amount: 15000, item: "100 Diamonds", popular: true },
+      { amount: 30000, item: "210 Diamonds", popular: true },
+      { amount: 50000, item: "360 Diamonds", popular: false },
+      { amount: 100000, item: "800 Diamonds", popular: false },
+    ],
+  },
+  {
+    id: "point-blank",
+    name: "Point Blank",
+    icon: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=178&h=178&fit=crop&crop=center",
+    category: "fps",
+    popular: false,
+    denominations: [
+      { amount: 10000, item: "1200 Cash", popular: true },
+      { amount: 25000, item: "3000 Cash", popular: true },
+      { amount: 50000, item: "6000 Cash", popular: false },
+      { amount: 100000, item: "12000 Cash", popular: false },
+    ],
+  },
+  /* --- Newly appended viral products --- */
+  {
+    id: "steam-wallet-id",
+    name: "Steam Wallet ID",
+    icon: "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=178&h=178&fit=crop&crop=center",
+    category: "other",
+    popular: true,
+    denominations: [
+      { amount: 10135, item: "Steam Wallet Rp8.000", popular: true },
+      { amount: 13200, item: "Steam Wallet Rp12.000", popular: true },
+      { amount: 44900, item: "Steam Wallet Rp45.000", popular: true },
+      { amount: 105100, item: "Steam Wallet Rp90.000", popular: false },
+      { amount: 119700, item: "Steam Wallet Rp120.000", popular: false },
+      { amount: 287600, item: "Steam Wallet Rp250.000", popular: false },
+    ],
+  },
+  {
+    id: "arena-breakout",
+    name: "Arena Breakout",
+    icon: "https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?w=178&h=178&fit=crop&crop=center",
+    category: "fps",
+    popular: true,
+    denominations: [
+      { amount: 14702, item: "Arena Breakout 60 Bonds", popular: true },
+      { amount: 67849, item: "Arena Breakout 310 Bonds", popular: true },
+      { amount: 134672, item: "Arena Breakout 630 Bonds", popular: true },
+      { amount: 669259, item: "Arena Breakout 3.200 Bonds", popular: false },
+      { amount: 336117, item: "Arena Breakout 1.580 Bonds", popular: false },
+      {
+        amount: 42575,
+        item: "Arena Breakout Kotak Anti Peluru 30 Hari",
+        popular: true,
+      },
+      {
+        amount: 69950,
+        item: "Arena Breakout Percobaan Elite 30 Hari",
+        popular: true,
+      },
+      {
+        amount: 110055,
+        item: "Arena Breakout Kotak Komposit 30 Hari",
+        popular: false,
+      },
+      {
+        amount: 167600,
+        item: "Arena Breakout Battle Pass Premium",
+        popular: false,
+      },
+      { amount: 11515, item: "Arena Breakout Pilihan Pemula", popular: true },
+      {
+        amount: 56450,
+        item: "Arena Breakout Battle Pass Lanjutan",
+        popular: true,
+      },
+    ],
+  },
+  {
+    id: "zenless-zone-zero",
+    name: "Zenless Zone Zero",
+    icon: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=178&h=178&fit=crop&crop=center",
+    category: "rpg",
+    popular: true,
+    denominations: [
+      { amount: 15000, item: "60 Polychromes", popular: true },
+      { amount: 25000, item: "300 Polychromes", popular: true },
+      { amount: 50000, item: "980 Polychromes", popular: true },
+      { amount: 100000, item: "1980 Polychromes", popular: false },
+      { amount: 250000, item: "6480 Polychromes", popular: false },
+    ],
+  },
+  {
+    id: "wuthering-waves",
+    name: "Wuthering Waves",
+    icon: "https://images.unsplash.com/photo-1603791452906-bb9f4d0a3b1a?w=178&h=178&fit=crop&crop=center",
+    category: "rpg",
+    popular: true,
+    denominations: [
+      { amount: 15000, item: "60 Astrite", popular: true },
+      { amount: 25000, item: "300 Astrite", popular: true },
+      { amount: 50000, item: "980 Astrite", popular: true },
+      { amount: 100000, item: "1980 Astrite", popular: false },
+      { amount: 250000, item: "6480 Astrite", popular: false },
+    ],
+  },
+  {
+    id: "punishing-gray-raven",
+    name: "Punishing Gray Raven",
+    icon: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=178&h=178&fit=crop&crop=center",
+    category: "rpg",
+    popular: false,
+    denominations: [
+      { amount: 15000, item: "60 Black Cards", popular: true },
+      { amount: 30000, item: "300 Black Cards", popular: true },
+      { amount: 50000, item: "980 Black Cards", popular: false },
+      { amount: 100000, item: "1980 Black Cards", popular: false },
+    ],
+  },
+  {
+    id: "ea-fc-mobile",
+    name: "EA FC Mobile",
+    icon: "https://images.unsplash.com/photo-1585079542156-2755d9c8a094?w=178&h=178&fit=crop&crop=center",
+    category: "other",
+    popular: true,
+    denominations: [
+      { amount: 12000, item: "60 FC Points", popular: true },
+      { amount: 25000, item: "160 FC Points", popular: true },
+      { amount: 50000, item: "325 FC Points", popular: true },
+      { amount: 100000, item: "860 FC Points", popular: false },
+      { amount: 250000, item: "2150 FC Points", popular: false },
+    ],
+  },
+  {
+    id: "tower-of-fantasy",
+    name: "Tower of Fantasy",
+    icon: "https://images.unsplash.com/photo-1586182987320-4f376d39d787?w=178&h=178&fit=crop&crop=center",
+    category: "rpg",
+    popular: false,
+    denominations: [
+      { amount: 15000, item: "60 Tanium", popular: true },
+      { amount: 30000, item: "300 Tanium", popular: true },
+      { amount: 50000, item: "980 Tanium", popular: false },
+      { amount: 100000, item: "1980 Tanium", popular: false },
+    ],
+  },
+  /* === End Added Games === */
 ];
 
 // Global state
@@ -536,27 +812,37 @@ function renderDenominations(denominations) {
   });
 }
 
-// Emoji selector berdasarkan nama item
-function getItemEmoji(itemName) {
+// === Emoji selector per jenis item ===
+function getItemEmoji(itemName = "") {
   const t = itemName.toLowerCase();
   if (t.includes("diamond")) return "💎";
-  if (t.includes("genesis") || t.includes("crystal")) return "🔮";
-  if (t.includes("shard")) return "✨";
-  if (t.includes("oneiric")) return "✨";
   if (t.includes("gem")) return "🔹";
+  if (t.includes("voucher")) return "🎟️";
+  if (t.includes("token")) return "🪙";
+  if (t.includes("starcoin")) return "⭐";
+  if (t.includes("wild core") || t.includes("core")) return "🔸";
+  if (t.includes("genesis") || t.includes("crystal")) return "🔮";
+  if (t.includes("shard") || t.includes("oneiric")) return "✨";
+  if (t.includes("polychrome")) return "🌈";
+  if (t.includes("astrite")) return "🧪";
+  if (t.includes("tanium")) return "🧪";
+  if (t.includes("black card")) return "🃏";
   if (t.includes("robux")) return "🪙";
   if (t.includes("minecoin")) return "🪙";
   if (t.includes("coin")) return "🪙";
-  if (t.includes("cash")) return "💵";
-  if (t.includes("voucher")) return "🎟️";
+  if (t.includes("bond")) return "🪙";
   if (t.includes("uc")) return "🪙";
-  if (t.includes("vp")) return "🎯";
   if (t.includes("cp")) return "🎯";
-  if (t.includes("show-bucks") || t.includes("bucks")) return "🪙";
+  if (t.includes("vp")) return "🎯";
+  if (t.includes("fc points")) return "⚽";
+  if (t.includes("v-buck") || t.includes("vbucks")) return "🪙";
+  if (t.includes("cod points")) return "🎯";
+  if (t.includes("simcash") || t.includes("cash")) return "💵";
+  if (t.includes("pass") || t.includes("membership")) return "🎫";
   return "🎮";
 }
 
-// Create denomination button
+// (Update: gunakan emoji dinamis untuk semua item)
 function createDenominationButton(denomination) {
   const button = document.createElement("div");
   button.className = "denomination-btn";
@@ -694,7 +980,7 @@ function generateWhatsAppMessage(playerId, buyerName, buyerPhone) {
   message += `💰 Harga: ${formatCurrency(selectedDenomination.amount)}\n\n`;
   message += `*🏆 Total: ${formatCurrency(selectedDenomination.amount)}*\n\n`;
   message += `Terima kasih telah memilih ${CONFIG.brandName}! 👑\n`;
-  message += `Pesanan akan diproses segera dengan kualitas premium terbaik.`;
+  message += `Pesanan akan diproses setelah pembayaran selesai`;
 
   return message;
 }
@@ -820,4 +1106,3 @@ function showToast(message, type = "info") {
 console.log("🏆 KAIROS TOPUP - Premium Gaming Service Loaded Successfully! 👑");
 console.log(`✨ ${GAMES_DATA.length} premium games available`);
 console.log("🎮 Ready to elevate your gaming experience!");
-
