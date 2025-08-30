@@ -18,12 +18,36 @@ const GAMES_DATA = [
     category: "moba",
     popular: true,
     denominations: [
-      { amount: 5000, item: "36 Diamonds", popular: true },
-      { amount: 12000, item: "85 Diamonds", popular: true },
-      { amount: 25000, item: "172 Diamonds", popular: true },
-      { amount: 50000, item: "344 Diamonds", popular: false },
-      { amount: 100000, item: "706 Diamonds", popular: false },
-      { amount: 250000, item: "1860 Diamonds", popular: false },
+      { amount: 2146, item: "3 Diamonds", popular: false },
+      { amount: 2477, item: "5 Diamonds", popular: false },
+      { amount: 4368, item: "12 Diamonds", popular: false },
+      { amount: 6272, item: "19 Diamonds", popular: false },
+      { amount: 8571, item: "28 Diamonds", popular: false },
+      { amount: 10555, item: "36 Diamonds", popular: true },
+      { amount: 12281, item: "44 Diamonds", popular: false },
+      { amount: 15366, item: "56 Diamonds", popular: false },
+      { amount: 23273, item: "86 Diamonds", popular: false },
+      { amount: 45130, item: "170 Diamonds", popular: true },
+      { amount: 45130, item: "172 Diamonds", popular: false },
+      { amount: 48675, item: "185 Diamonds", popular: false },
+      { amount: 57544, item: "222 Diamonds", popular: false },
+      { amount: 66531, item: "257 Diamonds", popular: false },
+      { amount: 88964, item: "344 Diamonds", popular: true },
+      { amount: 110140, item: "429 Diamonds", popular: false },
+      { amount: 132200, item: "514 Diamonds", popular: false },
+      { amount: 153528, item: "600 Diamonds", popular: false },
+      { amount: 176631, item: "706 Diamonds", popular: true },
+      { amount: 220731, item: "878 Diamonds", popular: false },
+      { amount: 264831, item: "1050 Diamonds", popular: false },
+      { amount: 309597, item: "1220 Diamonds", popular: false },
+      { amount: 356605, item: "1412 Diamonds", popular: false },
+      { amount: 535898, item: "2195 Diamonds", popular: false },
+      { amount: 894381, item: "3688 Diamonds", popular: false },
+      { amount: 1340649, item: "5532 Diamonds", popular: false },
+      { amount: 2238410, item: "9288 Diamonds", popular: false },
+      { amount: 79150, item: "Starlight Membership", popular: true },
+      { amount: 192650, item: "Starlight Member Plus", popular: false },
+      { amount: 143156, item: "Twilight Pass", popular: false },
     ],
   },
   {
@@ -515,21 +539,21 @@ function renderDenominations(denominations) {
 // Emoji selector berdasarkan nama item
 function getItemEmoji(itemName) {
   const t = itemName.toLowerCase();
-  if (t.includes('diamond')) return '💎';
-  if (t.includes('genesis') || t.includes('crystal')) return '🔮';
-  if (t.includes('shard')) return '✨';
-  if (t.includes('oneiric')) return '✨';
-  if (t.includes('gem')) return '🔹';
-  if (t.includes('robux')) return '🪙';
-  if (t.includes('minecoin')) return '🪙';
-  if (t.includes('coin')) return '🪙';
-  if (t.includes('cash')) return '💵';
-  if (t.includes('voucher')) return '🎟️';
-  if (t.includes('uc')) return '🪙';
-  if (t.includes('vp')) return '🎯';
-  if (t.includes('cp')) return '🎯';
-  if (t.includes('show-bucks') || t.includes('bucks')) return '🪙';
-  return '🎮';
+  if (t.includes("diamond")) return "💎";
+  if (t.includes("genesis") || t.includes("crystal")) return "🔮";
+  if (t.includes("shard")) return "✨";
+  if (t.includes("oneiric")) return "✨";
+  if (t.includes("gem")) return "🔹";
+  if (t.includes("robux")) return "🪙";
+  if (t.includes("minecoin")) return "🪙";
+  if (t.includes("coin")) return "🪙";
+  if (t.includes("cash")) return "💵";
+  if (t.includes("voucher")) return "🎟️";
+  if (t.includes("uc")) return "🪙";
+  if (t.includes("vp")) return "🎯";
+  if (t.includes("cp")) return "🎯";
+  if (t.includes("show-bucks") || t.includes("bucks")) return "🪙";
+  return "🎮";
 }
 
 // Create denomination button
