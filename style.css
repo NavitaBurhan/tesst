@@ -1094,74 +1094,74 @@ select:focus {
     }
 }
 
-/* === PURE STATIC MODE (no animation, no transition, no hover motion) === */
+/* === PURE STATIC MODE (simplified final performance overrides) === */
+/* Semua animasi, transisi, transform & efek berat dimatikan untuk mencegah lag */
 *, *::before, *::after {
     animation: none !important;
     transition: none !important;
-    scroll-behavior: auto !important;
-}
-
-/* Matikan semua efek khusus yang sebelumnya menggunakan animasi / transform */
-.kairos-logo-container,
-.kairos-brand-name,
-.kairos-hero-title,
-.category-btn,
-.category-btn.active,
-.game-card,
-.game-card .game-icon,
-.kairos-feature-item,
-.denomination-btn,
-.kairos-buy-btn,
-.kairos-payment-method,
-.kairos-header::before,
-.kairos-body::before,
-.kairos-hero::before,
-.kairos-hero::after {
-    animation: none !important;
     transform: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
-    background-size: initial !important;
+    scroll-behavior: auto !important;
 }
 
-/* Nonaktifkan efek hover sepenuhnya */
+.kairos-body::before,
+.kairos-header::before,
+.kairos-hero::before,
+.kairos-hero::after,
+.game-card::before,
+.game-card::after,
+.game-card .game-icon::before,
+.game-card .game-icon::after,
+.kairos-logo-container::before,
+.kairos-logo-container::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Kurangi blur untuk perangkat lemah */
+.kairos-header,
+.game-card,
+.kairos-modal,
+.kairos-toast,
+.kairos-order-summary,
+.kairos-payment-method,
+.kairos-feature-item {
+    backdrop-filter: none !important;
+}
+
+/* Matikan efek hover (tidak ada perubahan visual saat hover) */
 .game-card:hover,
 .kairos-feature-item:hover,
 .category-btn:hover,
 .denomination-btn:hover,
 .kairos-buy-btn:hover,
 .kairos-payment-method:hover {
-    transform: none !important;
-    box-shadow: none !important;
-    border-color: inherit !important;
     background: inherit !important;
+    border-color: inherit !important;
+    cursor: pointer;
 }
 
-/* Spinner dibuat statis */
+/* Spinner dimatikan */
 .loading {
-    animation: none !important;
-    border-top-color: var(--kairos-primary);
+    display: none !important;
 }
 
-/* Hilangkan pseudo decorative glow */
-.game-card::before,
-.game-card::after,
-.kairos-logo-container::after,
-.kairos-logo-container::before,
-.game-card .game-icon::before,
-.game-card .game-icon::after {
-    opacity: 0 !important;
-    animation: none !important;
-}
-
-/* Pastikan tidak ada animasi tersisa via inline style */
-*[style*="animation"] {
-    animation: none !important;
-}
+/* Hilangkan deklarasi keyframes (jika masih ada di atas, biarkan — ini menetralkan) */
+@keyframes backgroundPulse {}
+@keyframes headerShine {}
+@keyframes gradientShift {}
+@keyframes textGlow {}
+@keyframes heroBackground {}
+@keyframes heroSweep {}
+@keyframes titlePulse {}
+@keyframes cardGlow {}
+@keyframes iconGradient {}
+@keyframes fadeIn {}
+@keyframes slideUp {}
+@keyframes spin {}
 
 /* END PURE STATIC MODE */
-/* Ensure no glow/pulse shadows reappear */
-.kairos-brand-name,
 .game-card,
 .kairos-logo-container {
     text-shadow: none !important;
