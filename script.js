@@ -599,21 +599,15 @@ function generateWhatsAppMessage(playerId, buyerName, buyerPhone) {
 function openWhatsApp(message) {
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${CONFIG.whatsappNumber.replace('+', '')}?text=${encodedMessage}`;
-    
-    // Show loading state
     const buyBtn = document.getElementById('buyNowBtn');
     const originalText = buyBtn.innerHTML;
-    buyBtn.innerHTML = '<div class="loading"></div> Membuka WhatsApp...';
+    // sebelumnya: buyBtn.innerHTML = '<div class="loading"></div> Membuka WhatsApp...';
+    buyBtn.textContent = 'Membuka WhatsApp...'; // tanpa animasi
     buyBtn.disabled = true;
-    
     setTimeout(() => {
         window.open(whatsappUrl, '_blank');
-        
-        // Reset button
         buyBtn.innerHTML = originalText;
         buyBtn.disabled = false;
-        
-        // Close modal and show success
         closeGameModal();
         showToast('Pesanan premium berhasil dikirim ke WhatsApp! 👑', 'success');
     }, 1000);
