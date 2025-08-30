@@ -62,18 +62,6 @@ const GAMES_DATA = [
       { amount: 50000, item: "625 Vouchers", popular: false },
     ],
   },
-  {
-    id: "heroes-evolved",
-    name: "Heroes Evolved",
-    icon: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=100&h=100&fit=crop&crop=center",
-    category: "moba",
-    popular: false,
-    denominations: [
-      { amount: 10000, item: "100 Gems", popular: true },
-      { amount: 25000, item: "250 Gems", popular: true },
-      { amount: 50000, item: "500 Gems", popular: false },
-    ],
-  },
 
   // Battle Royale Games
   {
@@ -250,7 +238,7 @@ const GAMES_DATA = [
   {
     id: "honkai-star-rail",
     name: "Honkai Star Rail",
-    icon: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=100&h=100&fit=crop&crop=center",
+    icon: "https://cdn.unipin.com/images/icon_product_pages/1710829444-icon-Oversea%20Icon-1024_11zon.png",
     category: "rpg",
     popular: true,
     denominations: [
@@ -260,43 +248,66 @@ const GAMES_DATA = [
       { amount: 100000, item: "1980 Oneiric Shards", popular: false },
     ],
   },
-  {
-    id: "ragnarok-m",
-    name: "Ragnarok M",
-    icon: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=100&h=100&fit=crop&crop=center",
-    category: "rpg",
-    popular: false,
-    denominations: [
-      { amount: 10000, item: "60 Big Cat Coins", popular: true },
-      { amount: 25000, item: "150 Big Cat Coins", popular: true },
-      { amount: 50000, item: "300 Big Cat Coins", popular: false },
-    ],
-  },
-  {
-    id: "dragon-nest-m",
-    name: "Dragon Nest M",
-    icon: "https://images.unsplash.com/photo-1586182987320-4f376d39d787?w=100&h=100&fit=crop&crop=center",
-    category: "rpg",
-    popular: false,
-    denominations: [
-      { amount: 10000, item: "100 Diamonds", popular: true },
-      { amount: 25000, item: "250 Diamonds", popular: true },
-      { amount: 50000, item: "500 Diamonds", popular: false },
-    ],
-  },
 
   // Simulation Games
   {
     id: "roblox",
-    name: "Roblox",
-    icon: "https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=100&h=100&fit=crop&crop=center",
+    name: "Roblox Gift Card",
+    icon: "https://imgop.itemku.com/?url=https%3A%2F%2Fd1x91p7vw3vuq8.cloudfront.net%2Fgame%2F20241122%2F2nut08qgly657qki50zizg_thumbnail.png&w=96&q=75",
+    category: "simulation",
+    popular: false,
+    denominations: [
+      { amount: 156500, item: "Roblox Gift Card (US) $10", popular: true },
+      { amount: 231500, item: "Roblox Gift Card (US) $15", popular: true },
+      { amount: 311500, item: "Roblox Gift Card (US) $20", popular: false },
+      { amount: 376500, item: "Roblox Gift Card (US) $25", popular: false },
+    ],
+  },
+  {
+    id: "robux",
+    name: "Robux",
+    icon: "https://ditusi.co.id/storage/games/01JRABB42A68HP5V75SBY17S8D.webp",
     category: "simulation",
     popular: true,
     denominations: [
-      { amount: 10000, item: "800 Robux", popular: true },
-      { amount: 25000, item: "2000 Robux", popular: true },
-      { amount: 50000, item: "4500 Robux", popular: true },
-      { amount: 100000, item: "10000 Robux", popular: false },
+      { amount: 18000, item: "Robux 80 Vilog", popular: false },
+      { amount: 35000, item: "Robux 160 Vilog", popular: false },
+      { amount: 52000, item: "Robux 240 Vilog", popular: false },
+      { amount: 67000, item: "Robux 320 Vilog", popular: false },
+      { amount: 77000, item: "Robux 400 Vilog", popular: false },
+      { amount: 80000, item: "Robux 500 Vilog", popular: false },
+      { amount: 14700, item: "Robux 800 Vilog", popular: false },
+      { amount: 15700, item: "Robux 1000 Vilog", popular: false },
+    ],
+  },
+  {
+    id: "grow-a-garden",
+    name: "Grow a Garden (Roblox)",
+    icon: "https://tokoroblox.com/storage/categories/JtsJxWEH0PWiPfPhOzj5e8WG6MQ3asypgZDLDnR6.png",
+    category: "simulation",
+    popular: true,
+    denominations: [
+      { amount: 5000, item: "JOKI AFK 1 JAM", popular: true },
+      { amount: 17000, item: "JOKI AFK 12 JAM", popular: true },
+      { amount: 28000, item: "JOKI AFK 24 JAM", popular: true },
+      { amount: 5000, item: "WATERING CAN", popular: true },
+      { amount: 7000, item: "TROWEL", popular: true },
+      { amount: 17000, item: "GODLY SPLINKLER", popular: true },
+      { amount: 95000, item: "BURNING BUD SEED", popular: true },
+      { amount: 100000, item: "ELDER STRAWBERRY SEED", popular: true },
+    ],
+  },
+  {
+    id: "Steal-a-brairot",
+    name: "Steal A Brairot (Roblox)",
+    icon: "https://tokoroblox.com/storage/categories/AKRu9tgdBemRyjvwCoZq8OWkJP4g2omcXacoa3Hg.png",
+    category: "simulation",
+    popular: true,
+    denominations: [
+      { amount: 33000, item: "2x MONEY BRAINROT", popular: true },
+      { amount: 55000, item: "VIP BRAINROT", popular: true },
+      { amount: 25000, item: "BLACKHOLE SLAP", popular: true },
+      { amount: 55000, item: "FLYING CARPET", popular: true },
     ],
   },
   {
@@ -311,18 +322,6 @@ const GAMES_DATA = [
       { amount: 50000, item: "4000 Minecoins", popular: false },
     ],
   },
-  {
-    id: "the-sims-mobile",
-    name: "The Sims Mobile",
-    icon: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=100&h=100&fit=crop&crop=center",
-    category: "simulation",
-    popular: false,
-    denominations: [
-      { amount: 15000, item: "600 SimCash", popular: true },
-      { amount: 30000, item: "1250 SimCash", popular: true },
-      { amount: 50000, item: "2100 SimCash", popular: false },
-    ],
-  },
 
   // Other Games
   {
@@ -334,7 +333,7 @@ const GAMES_DATA = [
     denominations: [
       { amount: 15425, item: "100 GOLDSTAR", popular: true },
       { amount: 39175, item: "310 GOLDSTAR", popular: true },
-      { amount: 67675, item: "520 GOLDSTAR", popular: false }
+      { amount: 67675, item: "520 GOLDSTAR", popular: false },
     ],
   },
   {
@@ -364,19 +363,6 @@ const GAMES_DATA = [
     ],
   },
   {
-    id: "brawl-stars",
-    name: "Brawl Stars",
-    icon: "https://images.unsplash.com/photo-1586182987320-4f376d39d787?w=100&h=100&fit=crop&crop=center",
-    category: "other",
-    popular: false,
-    denominations: [
-      { amount: 15000, item: "170 Gems", popular: true },
-      { amount: 30000, item: "360 Gems", popular: true },
-      { amount: 50000, item: "950 Gems", popular: true },
-      { amount: 100000, item: "2000 Gems", popular: false },
-    ],
-  },
-  {
     id: "stumble-guys",
     name: "Stumble Guys",
     icon: "https://www.tokogame.com/_next/image?url=https%3A%2F%2Fstatic.tokogame.com%2Fproducts%2Fstumble-guys.png&w=256&q=75",
@@ -399,23 +385,11 @@ const GAMES_DATA = [
       },
     ],
   },
-  {
-    id: "fall-guys",
-    name: "Fall Guys",
-    icon: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=100&h=100&fit=crop&crop=center",
-    category: "other",
-    popular: false,
-    denominations: [
-      { amount: 15000, item: "1000 Show-Bucks", popular: true },
-      { amount: 30000, item: "2500 Show-Bucks", popular: true },
-      { amount: 50000, item: "4000 Show-Bucks", popular: false },
-    ],
-  },
   /* === Added Popular New Games === */
   {
     id: "honor-of-kings",
     name: "Honor of Kings",
-    icon: "https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?w=178&h=178&fit=crop&crop=center",
+    icon: "https://static-src.vocagame.com/BisnisVocagame/honor_of_king-8e04-original.webp",
     category: "moba",
     popular: true,
     denominations: [
@@ -434,23 +408,9 @@ const GAMES_DATA = [
     ],
   },
   {
-    id: "wild-rift",
-    name: "League of Legends: Wild Rift",
-    icon: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=178&h=178&fit=crop&crop=center",
-    category: "moba",
-    popular: true,
-    denominations: [
-      { amount: 10000, item: "125 Wild Cores", popular: true },
-      { amount: 25000, item: "300 Wild Cores", popular: true },
-      { amount: 50000, item: "625 Wild Cores", popular: true },
-      { amount: 100000, item: "1375 Wild Cores", popular: false },
-      { amount: 250000, item: "3500 Wild Cores", popular: false },
-    ],
-  },
-  {
-    id: "efootball-2024",
-    name: "eFootball 2024",
-    icon: "https://images.unsplash.com/photo-1603791452906-bb9f4d0a3b1a?w=178&h=178&fit=crop&crop=center",
+    id: "efootball-2025",
+    name: "eFootball 2025",
+    icon: "https://www.lapakgaming.com/static/category/EFootball.jpg",
     category: "sports",
     popular: true,
     denominations: [
@@ -464,7 +424,7 @@ const GAMES_DATA = [
   {
     id: "fortnite",
     name: "Fortnite",
-    icon: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=178&h=178&fit=crop&crop=center",
+    icon: "https://www.lapakgaming.com/static/images/category/fortnite-v-bucks.webp",
     category: "battle-royale",
     popular: true,
     denominations: [
@@ -488,22 +448,9 @@ const GAMES_DATA = [
     ],
   },
   {
-    id: "ragnarok-origin",
-    name: "Ragnarok Origin",
-    icon: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=178&h=178&fit=crop&crop=center",
-    category: "rpg",
-    popular: false,
-    denominations: [
-      { amount: 15000, item: "100 Diamonds", popular: true },
-      { amount: 30000, item: "210 Diamonds", popular: true },
-      { amount: 50000, item: "360 Diamonds", popular: false },
-      { amount: 100000, item: "800 Diamonds", popular: false },
-    ],
-  },
-  {
     id: "point-blank",
     name: "Point Blank",
-    icon: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=178&h=178&fit=crop&crop=center",
+    icon: "https://cdn.unipin.com/images/icon_product_pages/1571814027-icon-1559011491-icon-1557743544-icon-point_blank.jpg",
     category: "fps",
     popular: false,
     denominations: [
@@ -517,7 +464,7 @@ const GAMES_DATA = [
   {
     id: "steam-wallet-id",
     name: "Steam Wallet ID",
-    icon: "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=178&h=178&fit=crop&crop=center",
+    icon: "https://www.lapakgaming.com/static/images/category/voucher-steam-wallet.webp",
     category: "other",
     popular: true,
     denominations: [
@@ -532,7 +479,7 @@ const GAMES_DATA = [
   {
     id: "arena-breakout",
     name: "Arena Breakout",
-    icon: "https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?w=178&h=178&fit=crop&crop=center",
+    icon: "https://www.lapakgaming.com/static/category/PDP-ARENABREAKOUT.png",
     category: "fps",
     popular: true,
     denominations: [
@@ -570,50 +517,9 @@ const GAMES_DATA = [
     ],
   },
   {
-    id: "zenless-zone-zero",
-    name: "Zenless Zone Zero",
-    icon: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=178&h=178&fit=crop&crop=center",
-    category: "rpg",
-    popular: true,
-    denominations: [
-      { amount: 15000, item: "60 Polychromes", popular: true },
-      { amount: 25000, item: "300 Polychromes", popular: true },
-      { amount: 50000, item: "980 Polychromes", popular: true },
-      { amount: 100000, item: "1980 Polychromes", popular: false },
-      { amount: 250000, item: "6480 Polychromes", popular: false },
-    ],
-  },
-  {
-    id: "wuthering-waves",
-    name: "Wuthering Waves",
-    icon: "https://images.unsplash.com/photo-1603791452906-bb9f4d0a3b1a?w=178&h=178&fit=crop&crop=center",
-    category: "rpg",
-    popular: true,
-    denominations: [
-      { amount: 15000, item: "60 Astrite", popular: true },
-      { amount: 25000, item: "300 Astrite", popular: true },
-      { amount: 50000, item: "980 Astrite", popular: true },
-      { amount: 100000, item: "1980 Astrite", popular: false },
-      { amount: 250000, item: "6480 Astrite", popular: false },
-    ],
-  },
-  {
-    id: "punishing-gray-raven",
-    name: "Punishing Gray Raven",
-    icon: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=178&h=178&fit=crop&crop=center",
-    category: "rpg",
-    popular: false,
-    denominations: [
-      { amount: 15000, item: "60 Black Cards", popular: true },
-      { amount: 30000, item: "300 Black Cards", popular: true },
-      { amount: 50000, item: "980 Black Cards", popular: false },
-      { amount: 100000, item: "1980 Black Cards", popular: false },
-    ],
-  },
-  {
     id: "ea-fc-mobile",
-    name: "EA FC Mobile",
-    icon: "https://images.unsplash.com/photo-1585079542156-2755d9c8a094?w=178&h=178&fit=crop&crop=center",
+    name: "FC Mobile",
+    icon: "https://cdn.topupgim.com/product-tiles/34ce1696-92f2-4789-b110-983f18d0a682.png?w=200",
     category: "other",
     popular: true,
     denominations: [
@@ -623,20 +529,7 @@ const GAMES_DATA = [
       { amount: 100000, item: "860 FC Points", popular: false },
       { amount: 250000, item: "2150 FC Points", popular: false },
     ],
-  },
-  {
-    id: "tower-of-fantasy",
-    name: "Tower of Fantasy",
-    icon: "https://images.unsplash.com/photo-1586182987320-4f376d39d787?w=178&h=178&fit=crop&crop=center",
-    category: "rpg",
-    popular: false,
-    denominations: [
-      { amount: 15000, item: "60 Tanium", popular: true },
-      { amount: 30000, item: "300 Tanium", popular: true },
-      { amount: 50000, item: "980 Tanium", popular: false },
-      { amount: 100000, item: "1980 Tanium", popular: false },
-    ],
-  },
+  }
   /* === End Added Games === */
 ];
 
