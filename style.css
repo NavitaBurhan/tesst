@@ -132,6 +132,10 @@ body {
     position: relative;
     overflow: hidden;
     animation: gradientShift 2s ease infinite; /* lebih cepat */
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
 }
 
 @keyframes gradientShift {
@@ -805,7 +809,6 @@ body {
     color: var(--kairos-silver);
 }
 
-
 /* Payment Method */
 .kairos-payment-method {
     background: var(--kairos-glass);
@@ -1189,547 +1192,131 @@ select:focus {
     animation-iteration-count: 1 !important;
 }
 
-/* === REPLACE DENOMINATIONS LAYOUT (2-column responsive grid) === */
-/* Hapus/abaikan blok override denom sebelumnya, gunakan ini */
-.kairos-modal #denominationsList.kairos-denominations-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; /* mobile default */
-    gap: 12px !important;
-    margin-top: 4px;
-    width: 100%;
-    padding: 2px 0;
-}
-
-@media (min-width: 640px) {
-    .kairos-modal #denominationsList.kairos-denominations-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
-    }
-}
-
-.kairos-modal #denominationsList .denomination-btn {
-    background: #18242c !important;
-    border: 1.5px solid #25343e !important;
-    border-radius: 14px !important;
-    padding: 12px 14px !important;
-    text-align: left !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center;
-    gap: 4px;
-    min-height: 70px;
-    font-size: 13px;
-    line-height: 1.25;
-    color: #d3dce2 !important;
-    box-shadow: 0 3px 10px -4px rgba(0,0,0,.35);
-}
-
-.kairos-modal #denominationsList .denomination-btn .item-name {
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 0.25rem;
-    color: inherit;
-}
-
-.kairos-modal #denominationsList .denomination-btn .item-price {
-    font-size: 12px;
-    color: var(--kairos-silver);
-}
-
-
-/* Payment Method */
-.kairos-payment-method {
-    background: var(--kairos-glass);
-    border: 2px solid var(--kairos-glass-border);
-    border-radius: 12px;
-    padding: 1.25rem;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    backdrop-filter: blur(10px);
-}
-
-.kairos-payment-method:hover {
-    border-color: var(--kairos-emerald);
-    background: rgba(16, 185, 129, 0.1);
-}
-
-.kairos-payment-method.active {
-    border-color: var(--kairos-emerald);
-    background: linear-gradient(135deg, var(--kairos-emerald) 0%, var(--kairos-emerald-light) 100%);
-    color: white;
-    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
-}
-
-.kairos-payment-method.active i {
-    color: white !important;
-}
-
-.kairos-payment-method i {
-    color: var(--kairos-emerald);
-}
-
-/* Order Summary */
-.kairos-order-summary {
-    background: var(--kairos-glass);
-    border: 1px solid var(--kairos-glass-border);
-    border-radius: 16px;
-    padding: 1.5rem;
-    backdrop-filter: blur(10px);
-}
-
-.kairos-summary-title {
-    font-weight: 600;
-    color: var(--kairos-accent);
-    margin-bottom: 1rem;
-    font-size: 1.125rem;
-}
-
-.kairos-summary-value {
-    color: var(--kairos-silver-light);
-    font-weight: 500;
-}
-
-.kairos-summary-total {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 1.125rem;
-    border-top: 1px solid var(--kairos-glass-border);
-    padding-top: 0.75rem;
-    margin-top: 0.75rem;
-    color: var(--kairos-accent);
-}
-
-/* Buy Button */
-.kairos-buy-btn {
-    flex: 1;
-    background: linear-gradient(135deg, var(--kairos-primary) 0%, var(--kairos-accent) 100%);
-    color: white;
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.18s ease;
-    box-shadow: var(--kairos-shadow-green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.kairos-buy-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s;
-}
-
-.kairos-buy-btn:hover::before {
-    left: 100%;
-}
-
-.kairos-buy-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: none;
-}
-
-.kairos-buy-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
-}
-
-/* Toast Notification */
-.kairos-toast {
-    background: var(--kairos-bg-modal);
-    border: 1px solid var(--kairos-glass-border);
-    border-left: 4px solid var(--kairos-gold);
-    border-radius: 12px;
-    box-shadow: none;
-    padding: 1rem;
-    max-width: 20rem;
-    backdrop-filter: blur(20px);
-    color: var(--kairos-silver-light);
-}
-
-.toast-success {
-    border-left-color: var(--kairos-emerald);
-}
-
-.toast-success i {
-    color: var(--kairos-emerald);
-}
-
-.toast-error {
-    border-left-color: #ef4444;
-}
-
-.toast-error i {
-    color: #ef4444;
-}
-
-.toast-info {
-    border-left-color: var(--kairos-accent);
-}
-
-.toast-info i {
-    color: var(--kairos-accent);
-}
-
-/* Loading Spinner */
-.loading {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(13, 148, 136, 0.3);
-    border-radius: 50%;
-    border-top-color: var(--kairos-primary);
-    animation: spin 0.6s linear infinite; /* lebih cepat */
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideUp {
-    from { 
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--kairos-dark-light);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--kairos-primary);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--kairos-primary-dark);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .kairos-hero-title {
-        font-size: 2rem;
-    }
-    
-    .kairos-hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .kairos-hero-features {
-        gap: 1rem;
-    }
-    
-    .kairos-games-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        gap: 0.75rem;
-    }
-    
-    .game-card {
-        padding: 1rem;
-    }
-    
-    .game-card .game-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-    }
-    
-    .game-card h4 {
-        font-size: 13px;
-    }
-    
-    .game-card p {
-        font-size: 11px;
-    }
-    
-    .kairos-modal {
-        margin: 1rem;
-        max-width: calc(100vw - 2rem);
-    }
-    
-    .kairos-denominations-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .denomination-btn {
-        padding: 0.75rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .kairos-brand-name {
-        font-size: 1.25rem;
-    }
-    
-    .kairos-hero {
-        padding: 2rem 0;
-    }
-    
-    .kairos-hero-title {
-        font-size: 1.75rem;
-    }
-    
-    .kairos-feature-item {
-        padding: 0.75rem;
-    }
-}
-
-/* Focus Styles for Accessibility */
-button:focus,
-input:focus,
-select:focus {
-    outline: 2px solid var(--kairos-primary);
-    outline-offset: 2px;
-}
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-    .game-card {
-        border: 2px solid var(--kairos-primary);
-    }
-    
-    .category-btn {
-        border: 2px solid var(--kairos-primary);
-    }
-}
-
-/* === PURE STATIC MODE (simplified final performance overrides) === */
-/* Semua animasi, transisi, transform & efek berat dimatikan untuk mencegah lag */
-*, *::before, *::after {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    scroll-behavior: auto !important;
-}
-
-.kairos-body::before,
-.kairos-header::before,
-.kairos-hero::before,
-.kairos-hero::after,
-.game-card::before,
-.game-card::after,
-.game-card .game-icon::before,
-.game-card .game-icon::after,
-.kairos-logo-container::before,
-.kairos-logo-container::after {
-    display: none !important;
-    content: none !important;
-}
-
-/* Kurangi blur untuk perangkat lemah */
-.kairos-header,
-.game-card,
-.kairos-modal,
-.kairos-toast,
-.kairos-order-summary,
-.kairos-payment-method,
-.kairos-feature-item {
-    backdrop-filter: none !important;
-}
-
-/* Matikan efek hover (tidak ada perubahan visual saat hover) */
-.game-card:hover,
-.kairos-feature-item:hover,
-.category-btn:hover,
-.denomination-btn:hover,
-.kairos-buy-btn:hover,
-.kairos-payment-method:hover {
-    background: inherit !important;
-    border-color: inherit !important;
-    cursor: pointer;
-}
-
-/* Spinner dimatikan */
-.loading {
-    display: none !important;
-}
-
-/* Hilangkan deklarasi keyframes (jika masih ada di atas, biarkan — ini menetralkan) */
-@keyframes backgroundPulse {}
-@keyframes headerShine {}
-@keyframes gradientShift {}
-@keyframes textGlow {}
-@keyframes heroBackground {}
-@keyframes heroSweep {}
-@keyframes titlePulse {}
-@keyframes cardGlow {}
-@keyframes iconGradient {}
-@keyframes fadeIn {}
-@keyframes slideUp {}
-@keyframes spin {}
-
-/* END PURE STATIC MODE */
-.game-card,
+/* === LOGO IMAGE STYLING (INLINE WITH TEXT) === */
 .kairos-logo-container {
-    text-shadow: none !important;
-    box-shadow: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
 }
 
-/* Keep modal fade only (optional) */
-@keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
-@keyframes slideUp { from { opacity:0; transform:translateY(8px);} to { opacity:1; transform:translateY(0);} }
-
-/* Spinner kept but lighter */
-.loading {
-    animation: spin .8s linear infinite !important;
-    border-width: 2px !important;
+.kairos-logo-container .kairos-logo-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid rgba(255,255,255,0.08);
+    background:#0d1a21;
 }
 
-/* Remove any leftover gradient animation in active category buttons */
-.category-btn.active {
-    background-size: 100% 100% !important;
+@media (max-width:640px){
+    .kairos-logo-container .kairos-logo-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+    }
 }
 
-/* Clean fallback if any animation slips through */
-*[style*="animation"] {
-    animation-duration: 0s !important;
-    animation-iteration-count: 1 !important;
+@media (max-width:420px){
+    .kairos-logo-container .kairos-logo-img {
+        width: 44px;
+        height: 44px;
+    }
 }
 
-/* === DIAMOND LIST CLEAN 2-COLUMN GRID (MOBILE FRIENDLY) === */
+/* Fallback jika gambar gagal load */
+.kairos-logo-container .kairos-logo-img[onerror] {
+    background:#12242b;
+}
+
+/* END LOGO IMAGE STYLING */
+
+/* === CLEAN DIAMOND DENOM GRID OVERRIDES === */
 .kairos-modal #denominationsList {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2,1fr) !important;
     gap: 10px !important;
-    width: 100%;
     margin-top: 6px;
     padding: 0;
+    width:100%;
 }
-@media (min-width:640px) {
+@media (min-width:640px){
     .kairos-modal #denominationsList {
         grid-template-columns: repeat(auto-fill,minmax(150px,1fr)) !important;
-        gap: 12px !important;
+        gap:12px !important;
     }
 }
-
-/* Basic card */
 .kairos-modal #denominationsList .denomination-btn {
-    background: #111b22 !important;
-    border: 1px solid #21323c !important;
-    border-radius: 14px !important;
-    padding: 10px 12px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center;
-    gap: 6px;
-    min-height: 66px;
-    font-size: 13px;
-    line-height: 1.25;
-    color: #e5edf1 !important;
-    box-shadow: none !important;
-    cursor: pointer;
-    user-select: none;
+    background:#111b22 !important;
+    border:1px solid #21323c !important;
+    border-radius:14px !important;
+    padding:10px 12px !important;
+    min-height:64px;
+    display:flex !important;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    font-size:13px;
+    line-height:1.25;
+    color:#e5edf1 !important;
+    box-shadow:none !important;
+    transition:none !important;
 }
+.kairos-modal #denominationsList .denomination-btn .item-name {
+    font-weight:600;
+    font-size:13px;
+    margin:0;
+    color:#f0f7fa !important;
+    letter-spacing:.2px;
+}
+.kairos-modal #denominationsList .denomination-btn .item-price {
+    margin:0;
+    font-size:12.5px;
+    font-weight:600;
+    color:#06d6a0 !important;
+    letter-spacing:.3px;
+}
+.kairos-modal #denominationsList .denomination-btn.selected {
+    background:#0d2724 !important;
+    border-color:#06d6a0 !important;
+    color:#efffff !important;
+    box-shadow:0 0 0 2px rgba(6,214,160,.25) !important;
+}
+.kairos-modal #denominationsList .denomination-btn.selected .item-price {
+    color:#40e0d0 !important;
+}
+.kairos-modal #denominationsList .denomination-btn:hover {
+    background:#152128 !important;
+    border-color:#2a3c46 !important;
+}
+.kairos-modal #denominationsList .denomination-btn:focus-visible {
+    outline:2px solid #06d6a0;
+    outline-offset:2px;
+}
+@media (max-width:380px){
+    .kairos-modal #denominationsList .denomination-btn {
+        padding:9px 10px !important;
+        min-height:58px;
+        gap:4px;
+    }
+    .kairos-modal #denominationsList .denomination-btn .item-price {
+        font-size:12px;
+    }
+}
+/* === END CLEAN DIAMOND DENOM GRID OVERRIDES === */
 
-/* Row for emoji + name */
+/* === DENOM ROW EMOJI SUPPORT === */
 .kairos-modal #denominationsList .denomination-btn .denom-row {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-weight: 600;
-    letter-spacing: .2px;
+    line-height: 1.2;
 }
-
-/* Emoji */
 .kairos-modal #denominationsList .denomination-btn .denom-emoji {
     font-size: 16px;
     line-height: 1;
     filter: drop-shadow(0 0 2px rgba(0,255,204,.25));
+    flex-shrink: 0;
 }
-
-/* Name */
-.kairos-modal #denominationsList .denomination-btn .item-name {
-    margin: 0;
-    font-size: 13px;
-    color: #f0f7fa !important;
-}
-
-/* Price */
-.kairos-modal #denominationsList .denomination-btn .item-price {
-    margin: 0;
-    font-size: 12.5px;
-    font-weight: 600;
-    color: #06d6a0 !important;
-    letter-spacing: .3px;
-}
-
-/* Selected state */
-.kairos-modal #denominationsList .denomination-btn.selected {
-    background: #0d2724 !important;
-    border-color: #06d6a0 !important;
-    color: #efffff !important;
-    box-shadow: 0 0 0 2px rgba(6,214,160,.25) !important;
-}
-.kairos-modal #denominationsList .denomination-btn.selected .item-price {
-    color: #40e0d0 !important;
-}
-
-/* Focus (keyboard) */
-.kairos-modal #denominationsList .denomination-btn:focus-visible {
-    outline: 2px solid #06d6a0;
-    outline-offset: 2px;
-}
-
-/* Remove legacy styling remnants */
-.kairos-modal #denominationsList .denomination-btn.denom-card,
-.kairos-modal #denominationsList .denomination-btn .denom-check,
-.kairos-modal #denominationsList .denomination-btn .denom-price,
-.kairos-modal #denominationsList .denomination-btn .denom-item,
-.kairos-modal #denominationsList .denomination-btn .denom-content,
-.kairos-modal #denominationsList .denomination-btn .denom-badge {
-    all: unset;
-    display: revert;
-}
-
-/* No hover transform (lightweight) */
-.kairos-modal #denominationsList .denomination-btn:hover {
-    background: #152128 !important;
-    border-color: #2a3c46 !important;
-}
-
-/* Tighten on very small screens */
-@media (max-width:380px) {
-    .kairos-modal #denominationsList .denomination-btn {
-        padding: 9px 10px !important;
-        gap: 4px;
-        min-height: 60px;
-        font-size: 12.5px;
-    }
-    .kairos-modal #denominationsList .denomination-btn .item-price {
-        font-size: 12px;
-    }
-}
-/* === END DIAMOND LIST CLEAN GRID === */
+/* === END DENOM ROW EMOJI SUPPORT === */
