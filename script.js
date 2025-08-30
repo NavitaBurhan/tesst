@@ -3,7 +3,7 @@
 
 // Configuration
 const CONFIG = {
-  whatsappNumber: "+62895364952866", // Change this to your WhatsApp number
+  whatsappNumber: "+6283132422903", // Change this to your WhatsApp number
   currency: "IDR",
   brandName: "KAIROS TOPUP",
 };
@@ -820,3 +820,4 @@ function showToast(message, type = "info") {
 console.log("🏆 KAIROS TOPUP - Premium Gaming Service Loaded Successfully! 👑");
 console.log(`✨ ${GAMES_DATA.length} premium games available`);
 console.log("🎮 Ready to elevate your gaming experience!");
+
